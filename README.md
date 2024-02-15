@@ -36,6 +36,6 @@ In summary, this script automates the calibration of a spinal surgery robot syst
 In Figure 3, the upper image is the raw image of endoscope camera and the lower image is the image after calibration and undistortion.  
 
 <div align=center>
-<img src="https://github.com/ShawnHYSun/Images/blob/main/Camera%20Results.png" width="400" height="850">
+<img src="https://github.com/ShawnHYSun/Images/blob/main/Camera%20Results.png">
 </div>
 <p align="center">Figure 3. Calibration and Undistortion Resuklt</p>  
