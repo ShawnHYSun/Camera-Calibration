@@ -3,7 +3,7 @@
   
 This is a camera calibration program designed for the optical navigation system of spinal surgery robots. Spinal surgery robotic systems commonly employ endoscopic cameras to provide surgeons with a visual guide during procedures.  
   
-However, these endoscopic cameras are susceptible to camera distortion, as image 1 illustrates, which can impact the accuracy and reliability of the visual information relayed to surgeons. Camera distortion in spinal surgery robotic systems often arises due to lens imperfections, non-uniformities in the optical system, or the bending and reflection of light within the endoscope. These distortions may manifest as radial or tangential distortions, leading to image artifacts such as stretching, compression, or skewing of visual elements.   
+However, these endoscopic cameras are susceptible to camera distortion, as Figure 1 illustrates, which can impact the accuracy and reliability of the visual information relayed to surgeons. Camera distortion in spinal surgery robotic systems often arises due to lens imperfections, non-uniformities in the optical system, or the bending and reflection of light within the endoscope. These distortions may manifest as radial or tangential distortions, leading to image artifacts such as stretching, compression, or skewing of visual elements.   
 <div align=center>
 <img src="https://github.com/ShawnHYSun/Images/blob/main/Camera%20Distortion.png" width="400" height="220">
 </div>
@@ -20,3 +20,11 @@ The stucture of the optical navigation system of spinal surgery robot is shown i
 <p align="center">Figure 2. System Stucture Diagram</p>  
 
 Consequently, this project proposes a method to calibrate the camera, remove distortion of the image, obtain the camera posture and tool posture, and finally perform hand-eye calibration by using **OpenCV**, typically **cv2.calibrateHandEye** and **cv2.calibrateCamera** functions.
+
+**Code Description**  
+
+The provided code focuses on the calibration and navigation aspects within a spinal surgery robot system. Initially, the script undergoes a calibration process, utilizing images of a chessboard pattern to determine intrinsic camera parameters like distortion coefficients, camera matrix, and rotation and translation vectors. These parameters are crucial for rectifying and undistorting subsequent images, enhancing the accuracy of image processing.  
+The code then proceeds to undistort a set of input images using the obtained calibration parameters, creating a folder of undistorted images for further analysis. Subsequently, the undistorted images are recalibrated to refine the camera matrix and distortion coefficients. Additionally, the script extracts 3D pose information from corresponding CSV files, representing the transformation from the robot tool to the base. The core functionality lies in the calibration of hand-eye coordination, which involves finding the relationship between the tool's position and orientation concerning the camera's coordinate system. The script employs the OpenCV library to perform this hand-eye calibration (cv2.calibrateHandEye).  
+The final output includes the transformation matrix representing the camera-to-tool relationship, enabling precise navigation and positioning of surgical tools during spinal surgeries. The code also demonstrates the projection of control points, showcasing the accuracy achieved in mapping points between different coordinate systems.  
+In summary, this script automates the calibration of a spinal surgery robot system, ensuring accurate navigation and coordination between the camera and surgical tools, ultimately enhancing the precision and safety of spinal surgeries.  
+  
