@@ -349,9 +349,9 @@ std::vector<Eigen::Vector3d> vertex_projection(const Eigen::Matrix3d& mtx, doubl
 
 
 int main() {
-	std::string image_folder = "C:\\Users\\15308\\BaiduSyncdisk\\Medtronic\\raw_images";
-	std::string undist_folder = "C:\\Users\\15308\\BaiduSyncdisk\\Medtronic\\undistorted_images";
-	std::string pose_folder = "C:\\Users\\15308\\BaiduSyncdisk\\Medtronic\\pose";
+	std::string image_folder = "Input your own raw image folder's path";
+	std::string undist_folder = "C:\\undistorted_images";
+	std::string pose_folder = "Input your own pose CSV files folder's path";
 
 	std::vector<std::string> image_paths;
 
