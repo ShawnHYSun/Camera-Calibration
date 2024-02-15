@@ -38,4 +38,12 @@ In Figure 3, the upper image is the raw image of endoscope camera and the lower 
 <div align=center>
 <img src="https://github.com/ShawnHYSun/Images/blob/main/Camera%20Results.png">
 </div>
-<p align="center">Figure 3. Calibration and Undistortion Resuklt</p>  
+<p align="center">Figure 3. Calibration and Undistortion Result</p>  
+
+Projection error:  0.04493210460623427  
+Projection error:  0.04003448972402053  
+[array([-171.51705426,  371.03191491,  -67.09084168]), array([-179.87816451,  362.47923842,  -39.47838155]), array([-171.30075418,  375.45290908,  -32.86266239]), array([-162.93964392,  384.00558557,  -60.47512252])]
+  
+The Projection error values represent the mean reprojection error in the calibration process of a spinal surgery robot system. This error is a quantitative measure indicating the accuracy of mapping 3D points in the real world to their corresponding 2D image coordinates after applying the calibrated camera parameters. The accompanying array provides the 3D coordinates (X, Y, Z) of four control points after projection, showcasing the accuracy in spatial mapping achieved by the calibration procedure.  
+
+    
