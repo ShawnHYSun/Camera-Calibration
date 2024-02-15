@@ -22,9 +22,20 @@ The stucture of the optical navigation system of spinal surgery robot is shown i
 Consequently, this project proposes a method to calibrate the camera, remove distortion of the image, obtain the camera posture and tool posture, and finally perform hand-eye calibration by using **OpenCV**, typically **cv2.calibrateHandEye** and **cv2.calibrateCamera** functions.
 
 **Code Description**  
-
+  
 The provided code focuses on the calibration and navigation aspects within a spinal surgery robot system. Initially, the script undergoes a calibration process, utilizing images of a chessboard pattern to determine intrinsic camera parameters like distortion coefficients, camera matrix, and rotation and translation vectors. These parameters are crucial for rectifying and undistorting subsequent images, enhancing the accuracy of image processing.  
+  
 The code then proceeds to undistort a set of input images using the obtained calibration parameters, creating a folder of undistorted images for further analysis. Subsequently, the undistorted images are recalibrated to refine the camera matrix and distortion coefficients. Additionally, the script extracts 3D pose information from corresponding CSV files, representing the transformation from the robot tool to the base. The core functionality lies in the calibration of hand-eye coordination, which involves finding the relationship between the tool's position and orientation concerning the camera's coordinate system. The script employs the OpenCV library to perform this hand-eye calibration (cv2.calibrateHandEye).  
+  
 The final output includes the transformation matrix representing the camera-to-tool relationship, enabling precise navigation and positioning of surgical tools during spinal surgeries. The code also demonstrates the projection of control points, showcasing the accuracy achieved in mapping points between different coordinate systems.  
+  
 In summary, this script automates the calibration of a spinal surgery robot system, ensuring accurate navigation and coordination between the camera and surgical tools, ultimately enhancing the precision and safety of spinal surgeries.  
   
+**Result**  
+  
+In Figure 3, the upper image is the raw image of endoscope camera and the lower image is the image after calibration and undistortion.  
+
+<div align=center>
+<img src="https://github.com/ShawnHYSun/Images/blob/main/Camera%20Results.png" width="400" height="850">
+</div>
+<p align="center">Figure 3. Calibration and Undistortion Resuklt</p>  
